@@ -2,6 +2,7 @@ package com.mattworzala.resource.loader;
 
 import com.mattworzala.resource.registry.Registry;
 import com.mattworzala.resource.Resource;
+import org.jetbrains.annotations.NotNull;
 
 import java.nio.file.Path;
 
@@ -47,5 +48,5 @@ public interface ResourceLoader<S, R extends Resource> {
      *
      * @param resource The resource to load.
      */
-    void loadDirect(R resource);
+    void loadDirect(@NotNull R resource);
 }
