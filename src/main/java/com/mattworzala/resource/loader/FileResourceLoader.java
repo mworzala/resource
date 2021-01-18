@@ -25,11 +25,11 @@ public abstract class FileResourceLoader<R extends Resource> implements Resource
     private final List<Path> loaded = new ArrayList<>();
 
     private final Gson gson;
-    private final Class<R> type;
+    private final Class<? extends R> type;
     private boolean recursive = false;
     private boolean failOnIssue = false;
 
-    public FileResourceLoader(Gson gson, Class<R> type) {
+    public FileResourceLoader(Gson gson, Class<? extends R> type) {
         this.gson = gson;
         this.type = type;
     }

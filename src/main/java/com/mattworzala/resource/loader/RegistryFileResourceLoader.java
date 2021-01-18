@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public class RegistryFileResourceLoader<R extends Resource> extends FileResourceLoader<R> {
     private final MutableRegistry<R> registry;
 
-    public RegistryFileResourceLoader(Gson gson, MutableRegistry<R> registry, Class<R> type) {
+    public RegistryFileResourceLoader(Gson gson, MutableRegistry<R> registry, Class<? extends R> type) {
         super(gson, type);
         this.registry = registry;
     }
