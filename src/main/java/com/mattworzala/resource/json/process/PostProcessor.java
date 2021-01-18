@@ -43,7 +43,7 @@ public class PostProcessor implements TypeAdapterFactory {
                     // Inspect required fields
                     inspectRequired(t);
                 }
-                return null;
+                return t;
             }
         };
     }
