@@ -15,7 +15,7 @@ public class Identifier {
     public static Identifier of(@NotNull String namespacedId) {
         if (namespacedId.contains(":")) {
             String[] parts = namespacedId.split(":");
-            return new Identifier(parts[0], parts[0]);
+            return new Identifier(parts[0], parts[1]);
         }
         return new Identifier(null, namespacedId);
     }
